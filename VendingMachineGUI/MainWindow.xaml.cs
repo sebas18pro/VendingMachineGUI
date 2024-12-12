@@ -18,7 +18,7 @@ namespace VendingMachineGUI
         private const double MIN_AMOUNT_FOR_PAYING_CARD = 5;
         private const double BILL = 5;// constant variable with purposes of changing 
         private const double COIN = 1;
-        const string FILEPATH = "./stock.txt"; //File path to acces the csv file in the .exe directory with information of our stock
+        const string FILEPATH = "./../../../../stock.txt"; //File path to acces the csv file in the .exe directory with information of our stock
         #endregion
 
         #region CLASS_BACKINGFIELDS
