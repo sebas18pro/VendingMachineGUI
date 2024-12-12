@@ -1,0 +1,13 @@
+SevenUp,10,2.5
+Dr.Pepper,9,3
+CocaCola,10,2.17
+Sprite,9,2.27
+Mug,10,2.47
+Pepsi,10,2.48
+Fanta,9,2.47
+lay's,10,2
+PureProtein,8,3
+Twizzlers,10,4.28
+BigDaddy,10,2.13
+Reese,9,1.47
+SevenUp,10,2.5
