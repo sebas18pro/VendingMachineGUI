@@ -1,0 +1,99 @@
+﻿<Window x:Class="VendingMachineGUI.Views.VendingMachineCart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VendingMachineGUI.Views"
+        mc:Ignorable="d"
+        Title="VendingMachineCart" Width="800"
+        WindowStartupLocation="CenterScreen" SizeToContent="Height">
+    <Window.Resources>
+        <Style x:Key="CartInfoTitles" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="Margin" Value="20 0 0 0"></Setter>
+        </Style>
+        <Style x:Key="CartInfoPrices" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="Margin" Value="0 0 20 0"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+        </Style>
+        <Style x:Key="CartInfoLines" TargetType="{x:Type Line}">
+            <Setter Property="Stroke" Value="Black"></Setter>
+            <Setter Property="StrokeThickness" Value="2"></Setter>
+            <Setter Property="Margin" Value="20 20 20 10"></Setter>
+        </Style>
+        <Style x:Key="CartBtns" TargetType="Button">
+            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="FontStyle" Value="Italic"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="Width" Value="75"></Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel Background="LightSlateGray">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Cart Title -->
+            <TextBlock Text="Your Cart" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+            <!-- Cart Title -->
+
+            <!-- Basic Cart Outline -->
+            <Grid x:Name="CartItems" Grid.Row="1" Margin="0 15 0 50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="item" Text="Item" Grid.Row="0" Grid.Column="0" FontWeight="DemiBold" Margin="20 0 0 0"></TextBlock>
+                <TextBlock x:Name="price" Text="Price" Grid.Row="0" Grid.Column="1" FontWeight="DemiBold"></TextBlock>
+                <TextBlock x:Name="quantity" Text="Quantity" Grid.Row="0" Grid.Column="2" FontWeight="DemiBold"></TextBlock>
+                <TextBlock x:Name="total" Text="Total" Grid.Row="0" Grid.Column="3" FontWeight="DemiBold"></TextBlock>
+            </Grid>
+            <Line X1="800" Grid.Row="1" Stroke="Black" StrokeThickness="2" Margin="20 10 20 0"></Line>
+            <!-- Basic Cart Outline -->
+
+            <!-- Money Outline for Items -->
+            <Grid Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock  Text="Subtotal:" Grid.Row="0" Grid.Column="0" Style="{StaticResource CartInfoTitles}"></TextBlock>
+                <TextBlock  x:Name="subtotal" Text="$0" Grid.Row="0" Grid.Column="1" Style="{StaticResource CartInfoPrices}"></TextBlock>
+                <Line X1="400" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource CartInfoLines}"></Line>
+                <TextBlock Text="Sales Tax:" Grid.Row="1" Grid.Column="0" Style="{StaticResource CartInfoTitles}"></TextBlock>
+                <TextBlock x:Name="taxes" Text="$0" Grid.Row="1" Grid.Column="1" Style="{StaticResource CartInfoPrices}"></TextBlock>
+                <Line X1="400" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource CartInfoLines}"></Line>
+                <TextBlock Text="Coupon Code:" Grid.Row="2" Grid.Column="0" Style="{StaticResource CartInfoTitles}"></TextBlock>
+                <TextBlock Text="$0" Grid.Row="2" Grid.Column="1" Style="{StaticResource CartInfoPrices}"></TextBlock>
+                <Line X1="400" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource CartInfoLines}"></Line>
+                <TextBlock Text="Grand Total:" Grid.Row="3" Grid.Column="0" Style="{StaticResource CartInfoTitles}"></TextBlock>
+                <TextBlock x:Name="bigTotal" Text="$0" Grid.Row="3" Grid.Column="1" Style="{StaticResource CartInfoPrices}"></TextBlock>
+            </Grid>
+            <!-- Money Outline for Items -->
+
+            <!-- Additional Buttons -->
+            <Button Grid.Row="3" Style="{StaticResource CartBtns}" Content="Exit" Margin="5" Click="BtnVendingMachine"></Button>
+            <Button Grid.Row="3" Style="{StaticResource CartBtns}" Content="Reset Cart" Margin="100 5 5 5" Click="BtnResetCart"></Button>
+            <!-- Additional Buttons -->
+        </Grid>
+    </StackPanel>
+</Window>

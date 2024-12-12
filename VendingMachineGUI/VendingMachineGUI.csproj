@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\7up.jpg" />
+    <None Remove="Images\Arrow_Down.png" />
+    <None Remove="Images\Big_Daddy.jpg" />
+    <None Remove="Images\Card_Reader.jpg" />
+    <None Remove="Images\Cash_Insert.png" />
+    <None Remove="Images\Coca_Cola.jpg" />
+    <None Remove="Images\Coca_Cola.png" />
+    <None Remove="Images\DrPepper.png" />
+    <None Remove="Images\Fanta.png" />
+    <None Remove="Images\Lays.png" />
+    <None Remove="Images\Lays2.png" />
+    <None Remove="Images\Pepsi.png" />
+    <None Remove="Images\Pure_Protien.jpg" />
+    <None Remove="Images\Reese.png" />
+    <None Remove="Images\Root_Beer.jpg" />
+    <None Remove="Images\Shopping_Cart.png" />
+    <None Remove="Images\Sprite.png" />
+    <None Remove="Images\Twizzler.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\7up.jpg" />
+    <Resource Include="Images\Arrow_Down.png" />
+    <Resource Include="Images\Big_Daddy.jpg" />
+    <Resource Include="Images\Card_Reader.jpg" />
+    <Resource Include="Images\Cash_Insert.png" />
+    <Resource Include="Images\Coca_Cola.jpg" />
+    <Resource Include="Images\Coca_Cola.png" />
+    <Resource Include="Images\DrPepper.png" />
+    <Resource Include="Images\Fanta.png" />
+    <Resource Include="Images\Lays.png" />
+    <Resource Include="Images\Lays2.png" />
+    <Resource Include="Images\Pepsi.png" />
+    <Resource Include="Images\Pure_Protien.jpg" />
+    <Resource Include="Images\Reese.png" />
+    <Resource Include="Images\Root_Beer.jpg" />
+    <Resource Include="Images\Shopping_Cart.png" />
+    <Resource Include="Images\Sprite.png" />
+    <Resource Include="Images\Twizzler.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+</Project>

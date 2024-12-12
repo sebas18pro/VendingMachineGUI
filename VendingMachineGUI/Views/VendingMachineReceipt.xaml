@@ -1,0 +1,48 @@
+﻿<Window x:Class="VendingMachineGUI.Views.VendingMachineReceipt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VendingMachineGUI.Views"
+        mc:Ignorable="d"
+        Title="VendingMachineReceipt" Height="300" Width="350"
+        WindowStartupLocation="CenterScreen" SizeToContent="Height">
+    <StackPanel Background="LightSlateGray">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <!-- Cart Title -->
+            <TextBlock Text="Your Receipt" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+
+            <Line X1="800" Grid.Row="1" Stroke="Black" StrokeThickness="2" Margin="5"></Line>
+            <!-- Cart Title -->
+
+            <!-- Item List -->
+            <GroupBox  Header="Items" Grid.Row="2" Height="{Binding ElementName=items}" Width="{Binding ElementName=items}" BorderBrush="Black" BorderThickness="2" Background="White" FontWeight="ExtraBold" Margin="2">
+                <TextBlock Name="items" Text="">
+                    
+                </TextBlock>
+            </GroupBox>
+            <!-- Item List -->
+
+            <!-- Bills Breakdown OR Tax Inclusion -->
+            <GroupBox Header="Extra" Grid.Row="3" Height="{Binding ElementName=extra}" Width="{Binding ElementName=extra}" BorderBrush="Black" BorderThickness="2" Background="White" FontWeight="ExtraBold" Margin="2">
+                <TextBlock Name="extra" Text="">
+
+                </TextBlock>
+            </GroupBox>
+            <!-- Bills Breakdown OR Tax Inclusion -->
+
+            <!-- Exit Button (Back to Vending Machine) -->
+            <Button x:Name="BtnExitReceipt" Click="BtnExitReceipt_Click" Content="Exit" FontWeight="DemiBold" Grid.Row="4" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="2 20 0 0" BorderBrush="Black" BorderThickness="2" Background="White"></Button>
+            <!-- Exit Button -->
+
+        </Grid>
+    </StackPanel>
+</Window>
